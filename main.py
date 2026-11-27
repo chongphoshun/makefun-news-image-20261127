@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Deliver the make.fun news-image-20261127 entry image.
+"""Ship the make.fun news-image-20261127 entry image to the grader.
 
-Standard library only, no network. The front page is rendered at build
-time by draw.py (Pillow); this program only carries the finished
-``entry.png`` into the grader's output directory and proves the delivered
-copy is byte-identical to the one in the repository.
+Pure standard library, no network calls. The newspaper page itself is
+painted at build time by draw.py (Pillow); this program only moves the
+finished ``entry.png`` into the output directory and proves the copy it
+delivered is byte-for-byte the file the repository holds. It never runs
+draw.py — the image is already in the repo when this program runs.
 
 The image lives next to this file, so the program works from any working
 directory. The destination is picked in this order: ``--out <dir>`` on
